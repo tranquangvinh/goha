@@ -1,0 +1,61 @@
+ 
+<div class="col-md-4">
+    <div class="pleft75">
+
+        <!-- TT-S-SEARCH -->
+        <div class="tt-s-search">
+            <form action="{{ site.link }}">
+                <input name="s" type="text" required="" placeholder="Search articles">
+                <div class="tt-s-search-submit">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                    <input type="submit" value="">
+                </div>
+            </form>
+        </div>
+        <div class="empty-space marg-lg-b30"></div>
+
+        <!-- TT-S-BANNER -->
+        <div class="tt-s-banner">
+            <img class="img-responsive" src="{{ tie_options['imgSidebar'] }}" height="232" width="285" alt="">
+            <h5 class="tt-s-banner-title">{{ tie_options['titleSidebar'] }}</h5>
+            <div class="simple-text text-center size-3">
+                <p>{{ tie_options['contentSidebar'] }}</p>
+            </div>
+            <form>
+                <div class="c-input-4-wrapper">
+                    <input class="c-input type-4" type="text" required="" placeholder="Your Email">
+                    <div class="c-input-4-icon"><span class="lnr lnr-envelope"></span></div>
+                </div>
+                <div class="c-btn type-3 size-2 border-2 full">
+                   <input type="submit" value="{{ tie_options['txlSidebar'] }}"> 
+                </div>                                
+            </form>
+        </div>
+        <div class="empty-space marg-lg-b30"></div>
+
+        <div class="row">
+            <div class="col-sm-6 col-md-12">
+                <!-- TT-S-POST -->
+                <div class="tt-s-post-wrapper">
+                    <h4 class="c-h4">Bài viết mới nhất</h4>
+                    {% for item in posts_All %}
+                    <div class="tt-s-post clearfix">
+                        <a class="tt-s-post-img custom-hover size-2" href="#">
+                            <img class="img-responsive" src="{{ item.thumbnail.src }}" height="40" width="40" alt="">
+                        </a>
+                        <a class="tt-s-post-title">{{ item.get_title }}</a>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="empty-space marg-lg-b30"></div>                            
+            </div>                        
+            <div class="col-sm-6 col-md-12">
+                <div class="tt-s-advert">
+                    <img class="img-responsive" src="{{ tie_options['imgbnSidebar'] }}" height="400" width="317" alt="">
+                </div>                              
+            </div>
+        </div>
+    </div>
+
+</div>
+ 

@@ -1,0 +1,31 @@
+.checklistWidget .children {
+  margin-left: 25px;
+  display: none;
+}
+.checklistWidget .children li {
+  background: none !important;
+}
+.checklistWidget .open-list-sub {
+  position: absolute;
+  right: 0px;
+  padding: 0px;
+  font-size: 0px;
+  border: none;
+}
+.checklistWidget .open-list-sub:after {
+  color: #24B361;
+  top: 0px;
+}
+.checklistWidget .selectit {
+  position: relative;
+}
+.checklistWidget li {
+  position: relative;
+  padding: 2px 5px !important;
+}
+.checklistWidget li:nth-child(2n + 1) {
+  background-color: #e1e1e1;
+}
+.content-widget-recent .banner-left {
+  margin-right: -30px;
+}
